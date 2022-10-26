@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Title</title>
+</head>
+
+<body onload="initclock()">
+
+<div class="var">
+    <div class="container0">
+        <div class="variant">Кондартьев Андрей</div>
+        <div class="variant"> 6 Вариант</div>
+    </div>
+</div>
+
+<div class="container" ><p>Время</p></div>
+<div class="panel" id="clock">
+    <div class="datetime">
+        <div class="data">
+            <span id="day">День</span>
+            <span>, </span>
+            <span id="year">Год</span>
+            <span>, </span>
+            <span id="daynum">00 </span>
+            <span id="month">Месяц </span>
+        </div>
+
+        <div class="time">
+            <span id="hour">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </div>
+    </div>
+</div>
+
+<div class="container"><p>Календарь</p></div>
+<div class="panel" id="month-calendar">
+    <ul class="month">
+        <li class="prev"><i class="fas fa-angle-double-left" aria-hidden="true"></i></li>
+        <li class="next"><i class="fas fa-angle-double-right" aria-hidden="true"></i></li>
+        <li class="month-name"></li>
+        <li class="year-name"></li>
+    </ul>
+
+    <div class="red"></div>
+
+    <ul class="weekdays">
+        <li>Пн</li>
+        <li>Вт</li>
+        <li>Ср</li>
+        <li>Чт</li>
+        <li>Пт</li>
+        <li>Сб</li>
+        <li>Вс</li>
+    </ul>
+
+    <ul class="days">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+    </ul>
+</div>
+
+<div class="container"><p>Изменение объекта</p></div>
+<div class="panel" id="izmen">
+    <div class="opis">Через указанный промежуток времени 150мс перекрашивать блок (номер блока и цвет выбирается рандомно)</div>
+    <div class="randombox">
+        <div class="block1"></div>
+        <div class="block2"></div>
+        <div class="block3"></div>
+        <div class="block4"></div>
+        <div class="block5"></div>
+    </div>
+</div>
+
+<div class="container"><p>Анкета</p></div>
+<div class="panel" id="anketa">
+    <div class="opis"> Создайте форму регистрации, добавьте к ней поле E-mail. Выполните простую проверку на наличие символов и наличие знака @ в поле E-mail. Творчество приветствуется (Подсветка поля, на котором находится фокус, видоизменение полей...) 7-8 полей проверить.</div>
+
+    <div class="site">
+        <div class="opis"> Анкета Web-разработчика </div>
+        <div class="content">
+            <form action="#" id="form" name="form">
+                <div class="input-box">
+                    <input type="text"
+                           placeholder="Введите ваше имя"
+                           id="name"
+                           name="name"
+                           data-reg="^[А-ЯЁ][а-яё]*$" >
+                    <label for="name"> Только русские буквы</label>
+                </div>
+                <div class="input-box">
+                    <input type="text"
+                           placeholder="Введите вашу фамилию"
+                           id=first-name"
+                           name="first-name"
+                           data-reg="^[А-ЯЁ][а-яё]*$" >
+                    <label for="first-name"> Только русские буквы</label>
+                </div>
+                <div class="input-box">
+                    <input type="text"
+                           placeholder="Введите вашу Отчество"
+                           id=last-name"
+                           name="last-name"
+                           data-reg="^[А-ЯЁ][а-яё]*$" >
+                    <label for="last-name"> Только русские буквы</label>
+                </div>
+                <div class="input-box">
+                    <input type="text"
+                           placeholder="Введите почту"
+                           id="email"
+                           name="email"
+                           data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">
+                    <label for="email"> Пример: admin@mail.com </label>
+                </div>
+                <div class="input-box">
+                    <input type="text"
+                           placeholder="Введите телефон"
+                           id="phone"
+                           name="phone"
+                           data-reg="^((\+7|8)+([0-9]){10})$" >
+                    <label for="phone"> Пример: +79000000000, 89000000000</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="text"
+                           placeholder="Введите пароль"
+                           id="p1"
+                           name="p1"
+                           onkeyup='check();'
+                           data-reg="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                    <label for="p1"> </label>
+                </div>
+
+
+                <div class="input-box">
+                    <input type="text"
+                           placeholder="Введите пароль ещё раз"
+                           id="p2"
+                           name="p2"
+                           onkeyup='check();'
+                           data-reg="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                    <label for="p2"> </label>
+                </div>
+                <span id='message'></span>
+                <div class="input-box message-box">
+                    <textarea placeholder="Сообщение"></textarea>
+                </div>
+
+
+                <div class="button">
+                    <input type="submit" value="Отправить" id="button" name="button" >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container"><p>Меню</p></div>
+<div class="panel" id="menu">
+    <div class="menu-box">
+        <ul class="menu-but"> Меню
+            <li class="menu-elem">Первый элемент</li>
+            <li class="menu-elem">Второй элемент</li>
+            <li class="menu-elem">Третий элемент</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+<script src="/"></script>
+<script src="https://use.fontawesome.com/4a46ada1ad.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="java/menu.js"></script>
+<script src="java/but.js"></script>
+<script src="java/time.js"></script>
+<script src="java/kalendarik.js"></script>
+<script src="java/color.js"></script>
+<script src="java/anketa.js"></script>
+
+
+</body>
+</html>
